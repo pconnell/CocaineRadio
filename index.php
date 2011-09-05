@@ -2,6 +2,7 @@
 <head>
 <title>TestPlayer</title>
 <center>Cocaine Radio<br/><em>-get your fix.</em></center>
+<!--AJAX for playlist updates-->
 </head>
 <body>
 <OBJECT ID="MediaPlayer" WIDTH=385 HEIGHT=147
@@ -73,40 +74,36 @@ HEIGHT=240>
 </EMBED></OBJECT> 
 <p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here</a>
 </p>
-<p>
-<?php 
-	$html = implode('', file('http://72.205.2.22:8000/played.html?sid=1')); //need to update for proper url/ip
-	$loc = strrpos($html,'<br><table'); 
-	$loc2 = strrpos($html,'<br></font>'); 
-	$len = $loc2-$loc; 
-	$played = substr($html,$loc,$len); 
-	echo $played; 
-?>
-<p id = 'playlist'></p>
-
-<!--
+<p id = 'playlist' name = 'playlist'></p>  
+<p id ='1'>
+</p>
 <script type="text/javascript"> 
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-		xmlhttp=new XMLHttpRequest();
-	}
-	else
-	{// code for IE6, IE5
-	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	document.write('something<br/>');
-	xmlhttp.open("GET",/*"http://72.205.2.22:8000/played.html?sid=1"*/"http://www.bash.org/",true);
-	xmlhttp.send();
-	document.write('something else');
-	document.getElementById("playlist").innerHTML=xmlhttp.responseText;
-	/*xmlhttp.onreadystatechange=function()
-	{
-		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("playlist").innerHTML=xmlhttp.responseText;
+	function update(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+			//document.write("XMLHttp");
 		}
-    }*/
-</script>  -->
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/pls.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('playlist').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	setInterval(update,10000);
+</script>
+
+
+
 </body>
 </html>
