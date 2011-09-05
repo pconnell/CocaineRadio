@@ -71,6 +71,8 @@ NAME="MediaPlayer"
 WIDTH=320
 HEIGHT=240>
 </EMBED></OBJECT> 
+<p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here</a>
+</p>
 <p>
 <?php 
 	$html = implode('', file('http://72.205.2.22:8000/played.html?sid=1')); //need to update for proper url/ip
@@ -80,7 +82,31 @@ HEIGHT=240>
 	$played = substr($html,$loc,$len); 
 	echo $played; 
 ?>
-</p>
+<p id = 'playlist'></p>
 
+<!--
+<script type="text/javascript"> 
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	document.write('something<br/>');
+	xmlhttp.open("GET",/*"http://72.205.2.22:8000/played.html?sid=1"*/"http://www.bash.org/",true);
+	xmlhttp.send();
+	document.write('something else');
+	document.getElementById("playlist").innerHTML=xmlhttp.responseText;
+	/*xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("playlist").innerHTML=xmlhttp.responseText;
+		}
+    }*/
+</script>  -->
 </body>
 </html>
