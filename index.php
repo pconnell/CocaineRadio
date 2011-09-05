@@ -73,7 +73,7 @@ HEIGHT=240>
 </EMBED></OBJECT> 
 <p>
 <?php 
-	$html = implode('', file('http://127.0.0.1:8000/played.html?sid=1')); //need to update for proper url/ip
+	$html = implode('', file('http://72.205.2.22:8000/played.html?sid=1')); //need to update for proper url/ip
 	$loc = strrpos($html,'<br><table'); 
 	$loc2 = strrpos($html,'<br></font>'); 
 	$len = $loc2-$loc; 
