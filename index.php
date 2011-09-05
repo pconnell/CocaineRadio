@@ -1,7 +1,7 @@
 <html>
 <head>
-<!--<title>TestPlayer</title>
-<center>Cocaine Radio<br/><em>-get your fix.</em> -->
+<title>AudioNarcotics</title>
+<!--<center>Cocaine Radio<br/><em>-get your fix.</em> -->
 <center><img src="cocaine radio.jpg" alt="cocaine" width="1300" height="250" />
 </center>
 </head>
