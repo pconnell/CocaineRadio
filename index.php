@@ -70,7 +70,7 @@ TYPE="application/x-oleobject">
 NAME="MediaPlayer"
 WIDTH=320
 HEIGHT=240>
-</EMBED></OBJECT>
+</EMBED></OBJECT> 
 <p>
 <?php 
 	$html = implode('', file('http://127.0.0.1:8000/played.html?sid=1')); //need to update for proper url/ip
