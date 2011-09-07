@@ -8,15 +8,10 @@
 <body>
 <br/>
 <center>
-<!--embedded player here-->
-<embed src='http://www.shoutcast.com/media/popupPlayer_V19.swf?stationid=
-http://yp.shoutcast.com/sbin/tunein-station.pls?id=3116409&play_status=1' quality='high' 
-bgcolor='#ffffff' width='600' height='104' name='popupPlayer_V19' align='middle' allowScriptAccess='always' allowFullScreen='true' 
-type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/go/getflashplayer' ></embed>
-<p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here</a>
-</p>
+<p id = "player"></p>
+<p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here</a></p>
 </center>
-<!--AJAX for playlist updates-->
+<!--AJAX for player/playlist updates-->
 <p id = 'playlist' name = 'playlist'></p>  
 <script type="text/javascript"> 
 	function update(){
@@ -41,7 +36,33 @@ type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/go/getfla
 			}
 		}
 	}
-	setInterval(update,15000);
+	setInterval(update,10000);
+	
+	function getPlayer(){
+		var player = document.getElementById('player').innerHTML;
+		player = (player.trim) ? player.trim() : player.replace(/^\s+/,'');
+		if (player == ""){
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			{// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			}
+			else
+			{// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.open("GET","/player.php",true);
+			xmlhttp.send();
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4)
+				{
+					document.getElementById('player').innerHTML=xmlhttp.responseText;
+				}
+			}
+		}
+	}
+	setInterval(getPlayer,5000);
 </script>
 </body>
 </html>
