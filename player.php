@@ -2,7 +2,7 @@
 	$html = file_get_contents('http://www.shoutcast.com/Internet-Radio/CocaineRadio');
 	$pattern = '/id="[0-9]*" title="CocaineRadio"/';
 	$match = array();
-	preg_match($pattern,$html,&$match);
+	preg_match($pattern,$html,$match);
 	$id = $match[0];
 	$str = '';
 	if ($id != ''){
