@@ -1,11 +1,20 @@
-<object id="fmp256" type="application/x-shockwave-flash" data="/cocaineradio/flash/minicaster.swf" width="180" height="70">
-  <param name="movie" value="minicaster.swf" />
-
-  <param name="wmode" value="transparent" />
-   <div class="stirfry">
-   <h4>Minicaster Radio Playhead</h4>
-   <p>To listen you must <a href="http://www.macromedia.com/go/getflashplayer/"
-   title="Click here to install the Flash browser plugin from Macromedia">install Flash Player</a>. Visit
-   <a href="http://www.draftlight.net/dnex/mp3player/minicaster/" title="Draftlight Networks">Draftlight Networks</a>
-   for more info.</p></div>
-</object>
+<?php
+	$html = file_get_contents('http://www.shoutcast.com/Internet-Radio/CocaineRadio');
+	$pattern = '/id="[0-9]*" title="CocaineRadio"/';
+	$match = array();
+	preg_match($pattern,$html,&$match);
+	$id = $match[0];
+	$str = '';
+	if ($id != ''){
+		$patt = '/"[0-9]*/';
+		$mat = array();
+		preg_match($patt,$id,&$mat);
+		$id = $mat[0];
+		$id = substr($id,1);
+		//echo $id
+		$str = "<embed src='http://www.shoutcast.com/media/popupPlayer_V19.swf?stationid=http://yp.shoutcast.com/sbin/tunein-station.pls?id=".$id."&play_status=1' quality='high' bgcolor='#ffffff' width='600' height='104' name='popupPlayer_V19' align='middle' allowScriptAccess='always' allowFullScreen='true' type='application/x-shockwave-flash' pluginspage='http://www.adobe.com/go/getflashplayer' ></embed>" ;
+	}else{
+		$str = "<em>We're sorry, but the stream is currently unavailable.</em>";
+	}
+	echo $str;
+?>
