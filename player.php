@@ -8,7 +8,7 @@
 	if ($id != ''){
 		$patt = '/"[0-9]*/';
 		$mat = array();
-		preg_match($patt,$id,&$mat);
+		preg_match($patt,$id,$mat);
 		$id = $mat[0];
 		$id = substr($id,1);
 		//echo $id
