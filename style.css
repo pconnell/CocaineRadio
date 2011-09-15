@@ -14,14 +14,14 @@ embed{
 }
 
 th{
-	color:black;
+	color:gold;
 	font-weight:bold;
 	text-align:center;
 	font-size:18pt;
 }
 
 body{
-	background-image:url('Cocaine.jpg');
+	background-image:url('cocaine radio.jpg');
 	/*background-image:url('coke.png');*/
 	background-repeat:no-repeat;
 	background-attachment:fixed;
