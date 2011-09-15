@@ -1,7 +1,3 @@
-<?php
-	session_start();
-	//conditional to ensure username is set, redirect if necessary
-?>
 <html>
 <body>
 <?php
