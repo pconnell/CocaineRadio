@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<config version="1T" xmlns="http://www.draftlight.net/dnex/config/ns/1T/">
+<mp3cast>
+  <mount>http://72.205.2.22:8000/;</mount>
+  <website>http://pconnell89.umwblogs.org</website>
+  <title>Cocaine Radio</title>
+</mp3cast>
+<init autoplay="1" volume="80" reload="5" xfade="0" />
+</config>
+

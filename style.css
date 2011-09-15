@@ -1,0 +1,44 @@
+h1{
+	color:white;
+	text-align:center;
+	font-size:22pt;
+	/*background-color:#DEB887;*/
+}
+
+a{
+	color:green;
+}	
+
+embed{
+	background-color:black;
+}
+
+th{
+	color:black;
+	font-weight:bold;
+	text-align:center;
+	font-size:18pt;
+}
+
+body{
+	/*background-image:url('cocaine radio.jpg');*/
+	background-image:url('coke.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-color:black;
+}
+
+p{
+	color:white;
+}
+
+#fix{
+	background-image:url('fix.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+table{
+	color:white;
+}
