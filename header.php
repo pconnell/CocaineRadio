@@ -6,9 +6,9 @@
 <title>AudioNarcotics</title>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <center>
-<img src = "/cocaineradio/cokeradio.jpg" valign = 'middle'/>
+<!--<img src = "/cocaineradio/cokeradio.jpg" valign = 'middle'/>
 <img src = '/cocaineradio/fix.jpg' align = 'left' valign='middle'/>
-<img src = '/cocaineradio/fix.jpg' align = 'right' valign='middle'/>
+<img src = '/cocaineradio/fix.jpg' align = 'right' valign='middle'/> -->
 	<table id = 'projectData'>
 		<thead>
 			<tr>
