@@ -21,8 +21,8 @@ th{
 }
 
 body{
-	/*background-image:url('cocaine radio.jpg');*/
-	background-image:url('coke.png');
+	background-image:url('cocaine radio.jpg');
+	/*background-image:url('coke.png');*/
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center;
@@ -31,12 +31,6 @@ body{
 
 p{
 	color:white;
-}
-
-#fix{
-	background-image:url('fix.jpg');
-	background-repeat:no-repeat;
-	background-attachment:fixed;
 }
 
 table{
