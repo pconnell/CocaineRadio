@@ -1,10 +1,4 @@
 <?php
-	session_start();
+	$db = mysqli_connect('localhost:/tmp/mysql/skye.sock','ninfa','eG6ZltL7','skye') or 
+		die('Failed to connect');
 ?>
-<?php
-	$db = mysqli_connect('localhost','root','4:44mile','cocaineradio') 
-		or die('failed to connect');
-?>
-
-
-	
