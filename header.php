@@ -1,7 +1,4 @@
 <?php
-	session_start();
-?>
-<?php
 	include('db.php');
 	if ($db != null){
 		echo "connected to db!<br/>";
