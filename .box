@@ -6,14 +6,14 @@ php_extensions: [eaccelerator, mysql]
 php_error_reporting: 'E_ALL'
 php_display_errors: On
 php_short_open_tag: On
-php_date_timezone: US/eastern
+#php_date_timezone: US/eastern
 
 ##############
 ##WEB SETTINGS
 document_root: /
 index_list: [index.html, index.php]
 default_gateway: index.php
-permissions:
-	/admin/sql
-		- '72.205.2.22' : allow
-		- all: deny
+#permissions:
+#	/admin/sql
+#		- '72.205.2.22' : allow
+#		- all: deny
