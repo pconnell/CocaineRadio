@@ -14,6 +14,6 @@ document_root : /
 index_list : [index.html, index.php]
 default_gateway : index.php
 #permissions :
-#	/admin/sql : 
-  - '72.205.2.22' : allow
-  - all : deny
+  /admin/sql : 
+    - '72.205.2.22' : allow
+    - all : deny
