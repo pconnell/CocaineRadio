@@ -10,10 +10,10 @@ php_short_open_tag: On
 
 ##############
 ##WEB SETTINGS
-document_root: /
-index_list: [index.html, index.php]
-default_gateway: index.php
-#permissions:
-#	/admin/sql
-#		- '72.205.2.22' : allow
-#		- all: deny
+document_root : /
+index_list : [index.html, index.php]
+default_gateway : index.php
+#permissions :
+#	/admin/sql : 
+  - '72.205.2.22' : allow
+  - all : deny
