@@ -4,9 +4,7 @@ document_root: /
 index_list: 
   - index.html
   - index.php
-permissions: 
-  ? "/admin/sql - '72.205.2.22'"
-  : allow
+permissions: ~
 php_date_timezone: US/eastern
 php_display_errors: true
 php_error_reporting: E_ALL
@@ -14,4 +12,3 @@ php_extensions:
   - eaccelerator
   - mysql
 php_short_open_tag: true
-
