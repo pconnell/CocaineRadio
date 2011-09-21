@@ -1,0 +1,3 @@
+<form name = 'insert' method = 'POST' action = 'sql_query_entry.php'>
+
+</form>
