@@ -12,6 +12,5 @@ php_display_errors: true
 php_error_reporting: E_ALL
 php_extensions: 
   - eaccelerator
-  - mysql
+  - mysqli
 php_short_open_tag: true
-
