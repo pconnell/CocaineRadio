@@ -1,6 +1,6 @@
 <?php
 	include('db.php');
-	if ($db != null){
+	if ($mysqli != null){
 		echo "connected to db!<br/>";
 	}
 ?>
