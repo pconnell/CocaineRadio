@@ -30,6 +30,8 @@ $cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Server parameters */
 $cfg['Servers'][$i]['host'] = 'localhost';
 //$cfg['Servers'][$i]['connect_type'] = 'tcp';
+$cfg['Servers'][$i]['user'] = 'elenore';
+$cfg['Servers'][$i]['password'] = '8dnTIbvF';
 $cfg['Servers'][$i]['connect_type'] = 'socket';
 $cfg['Servers'][$i]['socket'] = '/tmp/mysql/belle.sock';
 $cfg['Servers'][$i]['compress'] = false;
@@ -40,8 +42,8 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
 /*
  * phpMyAdmin configuration storage settings.
  */
-$cfg['Servers'][$i]['controluser'] = 'elenore';
-$cfg['Servers'][$i]['controlpass'] = '8dnTIbvF';
+$cfg['Servers'][$i]['controluser'] = 'patrick';
+$cfg['Servers'][$i]['controlpass'] = '4:44mile';
  
 /* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controluser'] = 'pma';
