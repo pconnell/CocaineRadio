@@ -10,6 +10,8 @@
 			if (!$result){
 				echo "there was an error while entering your query. please try again.";
 			}
+		}else{
+			echo "no values<br/>";
 		}
 	?>
 </form>
