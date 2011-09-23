@@ -1,3 +1,3 @@
 <?php
-	$mysqli = mysqli_connect("/tmp/mysql/deadra.sock","lindsy","XUJQTbOP","deadra");
+	$mysqli = mysqli_connect("localhost;unix_socket=/tmp/mysql/deadra.sock","lindsy","XUJQTbOP","deadra");
 ?>
