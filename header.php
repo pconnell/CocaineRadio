@@ -7,7 +7,7 @@
 	}
 	$result->setFetchMode(PDO::FETCH_ASSOC);
 	while ($row = $result->fetch()){
-		echo "<br/><h1>$row['username']</h1>";
+		echo "<br/><h1>".$row['username']."</h1>";
 	}
 ?>
 <html>
