@@ -5,6 +5,10 @@
 	}*/
 	$query = "SELECT * FROM users;";
 	$result = mysqli_query($mysqli,$query);
+	if (!$result){
+		echo "aw...<br/>";
+	}
+	
 	while ($row = mysqli_fetch_array($result)){
 		echo $row['username'];
 	}
