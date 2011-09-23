@@ -1,4 +1,4 @@
 <?php
-	//$mysqli = mysqli_connect("localhost;unix_socket=/tmp/mysql/deadra.sock","lindsy","XUJQTbOP","deadra",3307,"deadra.sock");
-	$mysqli = new mysqli('localhost:/tmp/mysql/deadra.sock','lindsy','XUJQTbOP','deadra') or die('Failed to connect');
+	$mysqli = mysqli_connect('/tmp/mysql/belle.sock','elenore','8dnTIbvF','belle');
+	//$mysqli = new mysqli('/tmp/mysql/belle.sock','elenore','8dnTIbvF','belle') or die('Failed to connect');
 ?>
