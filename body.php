@@ -19,7 +19,7 @@
 		<td></td>
 		<td>
 			<p id = 'uploader'>
-				<form method = 'POST' onclick = "upload()">
+				<form method = 'POST' action = "upload()">
 					<input type = 'text' id = 'toUpload'></input>
 					<input type = 'submit' id = 'pushMe'></input>
 				</form>
