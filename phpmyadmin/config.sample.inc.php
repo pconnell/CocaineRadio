@@ -26,9 +26,9 @@ $i = 0;
  */
 $i++;
 /* Authentication type */
-$cfg['Servers'][$i]['auth_type'] = 'config';
+$cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = '';//'localhost';
+$cfg['Servers'][$i]['host'] = 'localhost';
 //$cfg['Servers'][$i]['connect_type'] = 'tcp';
 $cfg['Servers'][$i]['port'] = '';
 $cfg['Servers'][$i]['user'] = 'elenore';
