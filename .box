@@ -11,7 +11,5 @@ permissions:
 php_date_timezone: US/eastern
 php_display_errors: true
 php_error_reporting: E_ALL
-php_extensions: 
-  - mysqli
-  - pdo_mysql
+php_extensions: [mcrypt, mysqli, mysql, mbstring]
 php_short_open_tag: true
