@@ -14,7 +14,7 @@
  * This is needed for cookie based authentication to encrypt password in
  * cookie
  */
-$cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+$cfg['blowfish_secret'] = 'blah'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /*
  * Servers configuration
@@ -40,7 +40,9 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
 /*
  * phpMyAdmin configuration storage settings.
  */
-
+$cfg['Servers'][$i]['controluser'] = 'patrick';
+$cfg['Servers'][$i]['controlpass'] = 'infinity';
+ 
 /* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controluser'] = 'pma';
 // $cfg['Servers'][$i]['controlpass'] = 'pmapass';
