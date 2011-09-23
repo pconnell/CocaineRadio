@@ -43,8 +43,8 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
 /*
  * phpMyAdmin configuration storage settings.
  */
-$cfg['Servers'][$i]['controluser'] = 'patrick';
-$cfg['Servers'][$i]['controlpass'] = 'pattypass';
+$cfg['Servers'][$i]['controluser'] = 'elenore';
+$cfg['Servers'][$i]['controlpass'] = '8dnTIbvF';
  
 /* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controluser'] = 'pma';
