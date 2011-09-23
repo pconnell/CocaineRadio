@@ -1,7 +1,12 @@
 <?php
 	include('db.php');
-	if ($mysqli != null){
+	/*if ($mysqli != null){
 		echo "connected to db!<br/>";
+	}*/
+	$query = "SELECT * FROM users;";
+	$result = mysqli_query($mysqli,$query);
+	while ($row = mysqli_fetch_array($result)){
+		echo $row['username'];
 	}
 ?>
 <html>
