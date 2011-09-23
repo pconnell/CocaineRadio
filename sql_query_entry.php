@@ -1,5 +1,5 @@
 <form name = 'insert' method = 'POST' action = 'sql_query_entry.php'>
-	<input type = 'text' id = 'query'/>
+	<input type = 'textbox' id = 'query'/>
 	<input type = 'submit' name = 'enter query'/>
 	<?php
 		include('db.php');
