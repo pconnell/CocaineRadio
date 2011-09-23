@@ -13,4 +13,5 @@ php_display_errors: true
 php_error_reporting: E_ALL
 php_extensions: 
   - mysqli
+  - pdo_mysql
 php_short_open_tag: true
