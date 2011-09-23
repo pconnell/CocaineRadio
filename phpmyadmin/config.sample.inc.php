@@ -34,14 +34,14 @@ $cfg['Servers'][$i]['connect_type'] = 'socket';
 $cfg['Servers'][$i]['socket'] = '/tmp/mysql/belle.sock';
 $cfg['Servers'][$i]['compress'] = false;
 /* Select mysqli if your server has it */
-$cfg['Servers'][$i]['extension'] = 'mysql';
+$cfg['Servers'][$i]['extension'] = 'mysqli';
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
 /*
  * phpMyAdmin configuration storage settings.
  */
-$cfg['Servers'][$i]['controluser'] = 'patrick';
-$cfg['Servers'][$i]['controlpass'] = 'infinity';
+$cfg['Servers'][$i]['controluser'] = 'elenore';
+$cfg['Servers'][$i]['controlpass'] = '8dnTIbvF';
  
 /* User used to manipulate with storage */
 // $cfg['Servers'][$i]['controluser'] = 'pma';
