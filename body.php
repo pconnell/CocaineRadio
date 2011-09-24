@@ -51,7 +51,7 @@
 			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET","/cocaineradio/pls.php",true);
+		xmlhttp.open("GET","/pls.php",true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
