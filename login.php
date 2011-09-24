@@ -25,7 +25,7 @@
 			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		var queryString = "/cocaineradio/login_helper.php?username="+username+"&password="+password;
+		var queryString = "/login_helper.php?username="+username+"&password="+password;
 		xmlhttp.open("GET",queryString,true);
 		xmlhttp.send(null);
 		
