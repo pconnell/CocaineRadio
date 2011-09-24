@@ -1,8 +1,10 @@
 <html>
-<body>
-<?php
-	//include('logout.php');
-?>
+<body id = 'pageBody'>
+
+<form action = "ajax_update('/logout.php','pageBody')">
+	<input type = 'submit' name = 'Logout'/>
+</form>
+
 <center>
 <table border = '2' id = 'siteData'>
 <thead>
@@ -85,6 +87,53 @@
 			}
 		}
 	}
+	
+	function logout(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+			//document.write("XMLHttp");
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/logout.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('body').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	
+	function ajax_update(fileLoc, objID){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+			//document.write("XMLHttp");
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET",fileLoc,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById(objID).innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	
 </script>
 </body>
 </html>
