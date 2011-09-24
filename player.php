@@ -1,4 +1,4 @@
-<object id="fmp256" type="application/x-shockwave-flash" data="/cocaineradio/flash/minicaster.swf" width="180" height="70">
+<object id="fmp256" type="application/x-shockwave-flash" data="/flash/minicaster.swf" width="180" height="70">
   <param name="movie" value="minicaster.swf" />
 
   <param name="wmode" value="transparent" />
