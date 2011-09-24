@@ -1,8 +1,8 @@
 <html>
 <body id = 'pageBody'>
 
-<form action = "ajax_update('/logout.php','pageBody')">
-	<input type = 'submit' name = 'Logout'/>
+<form action = ''>
+	<input type = 'submit' name = 'Logout' onClick = "ajax_update('/logout.php','pageBody')"/>
 </form>
 
 <center>
