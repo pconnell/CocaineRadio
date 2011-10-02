@@ -41,10 +41,10 @@
 	//include('body.php');
 	if(isset($_SESSION['username'])){
 		//include('body.php');
-		echo "<script>ajax('/body.php','pageBody')</script>";
+		echo "<script>setLogin();</script>";
 	}else{
 		//include('login.php');
-		echo "<script>ajax('/login.php','pageBody')</script>";
+		echo "<script>setBody();</script>";
 	}
 ?>
 
@@ -54,7 +54,7 @@
 
 
 <script type="text/javascript"> 
-	function setBody(data){
+	function setBody(/*data*/){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -65,7 +65,7 @@
 			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",""+data,true);
+		xmlhttp.open("GET",'/body.php',true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
@@ -76,6 +76,28 @@
 		}
 	
 	}
+	function setLogin(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET",'/login.php',true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('pageBody').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	
 //	setBody('/body.php');
 	
 
