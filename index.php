@@ -35,7 +35,7 @@
 </head>
 
 <?php
-	/*session_start();
+	session_start();
 	include('db.php');
 	//include('header.php');
 	//include('body.php');
@@ -43,7 +43,7 @@
 		include('body.php');
 	}else{
 		include('login.php');
-	}*/
+	}
 ?>
 
 <body id = 'pageBody'>
@@ -142,6 +142,6 @@
 			}
 		}
 	}
-	ajax('/login.php','pageBody');
+	//ajax('/login.php','pageBody');
 	//ajax('/login.php','body');
 </script>
