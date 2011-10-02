@@ -122,6 +122,14 @@
 	}
 	
 </script>
+<?php
+	if(isset($_SESSION[''])){
+		echo "<script>body();</script>;";
+	}else{
+		echo "<script>log();</script>;";
+	}
+?>
+
 <body id = 'pageBody'></body>
 </head>
 
