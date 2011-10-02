@@ -46,10 +46,14 @@
 	}*/
 ?>
 
+<body id = 'pageBody'>
+
+</body>
 <script>ajax_update('/login.php','pageBody')</script>
 
 
 <script type="text/javascript"> 
+
 	function update(){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
