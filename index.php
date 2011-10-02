@@ -80,11 +80,12 @@ d.innerhtml=variable holding the text you wish to display
 			}
 		}
 	}
+	update('/body.php','pageBody');
 </script>
 	<?php
 	// if the var is set, ajax the body
 	// for the included blocks in this section - accessible only via admin folder? how can i does it?
-		if(isset($_SESSION['username'])){ //session set, include the page body!
+		/*if(isset($_SESSION['username'])){ //session set, include the page body!
 			echo "<script type = 'text/javascript'>
 				  update('/body.php','pageBody');
 				  </script>";
@@ -92,7 +93,7 @@ d.innerhtml=variable holding the text you wish to display
 			echo "<script type = 'text/javascript'>
 				  update('/login.php','pageBody');
 			      </script>";
-		}
+		}*/
 	// else, ajax the login code.
 	?>
 	
