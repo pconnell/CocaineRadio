@@ -73,29 +73,26 @@ d.innerhtml=variable holding the text you wish to display
 			}
 		}
 	}
-	update('/body.php','body');
+	//update('/body.php','body');
 </script>
 	<?php
 	// if the var is set, ajax the body
 	// for the included blocks in this section - accessible only via admin folder? how can i does it?
-		/*if(isset($_SESSION['username'])){ //session set, include the page body!
+		if(isset($_SESSION['username'])){ //session set, include the page body!
 			echo "<script type = 'text/javascript'>
-				  update('/body.php','pageBody');
+				  update('/body.php','page');
 				  </script>";
 		}else{//session not set, page body should be the login script
 			echo "<script type = 'text/javascript'>
-				  update('/login.php','pageBody');
+				  update('/login.php','page');
 			      </script>";
-		}*/
+		}
 	// else, ajax the login code.
 	?>
 	
 </head>
 
-<body id = "pageBody">
-<!-- this gets set by the ajax, depending on login state.
-		reminds me...body needs a proper logout.
--->
+<body id = 'page'>
 </body>
 
 <footer>
