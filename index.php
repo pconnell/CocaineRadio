@@ -36,6 +36,14 @@
 </html><html>
 <body id = 'pageBody'></body>
 
+<?php
+	if(isset($_SESSION[''])){
+		echo "<script>ajax_update('/body.php','pageBody');</script>";
+	}else{
+		echo "<script>ajax_update('/login.php','pageBody');</script>";
+	}
+?>
+
 <script type="text/javascript"> 
 	function update(){
 		var xmlhttp;
