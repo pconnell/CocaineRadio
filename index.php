@@ -17,6 +17,8 @@ d.innerhtml=variable holding the text you wish to display
 ?>
 <html>
 <head>
+<title>AudioNarcotics</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <object id="fmp256" type="application/x-shockwave-flash" data="/flash/minicaster.swf" width="180" height="70">
   <param name="movie" value="minicaster.swf" />
 
