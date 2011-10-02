@@ -1,17 +1,19 @@
+<div id = 'login'>
 <center>
 		<h1>Please log-in to upload, vote, and view play history!</h1>
 		<form id = 'log' method = 'get' action = 'javascript:login()'>
-			Username:<input type = 'text' id = 'username'/>
-			Password:<input type = 'password' id = 'password'/>
+		Username:<input type = 'text' id = 'username' style='vertical-align:middle'/>
+		Password:<input type = 'password' id = 'password'/>
 		<input type = 'submit' id = 'submit' value = 'login'/>
 	</form>
 </center>
+</div>
 <script>
 	function login(){
 		var form = document.getElementById('log');
 		var username = form.username.value;
 		var password = form.password.value;
-		var space = document.getElementById('body');
+		var space = document.getElementById('login');
 		var xmlhttp;
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -26,10 +28,10 @@
 		var queryString = "/login_helper.php?username="+username+"&password="+password;
 		xmlhttp.open("GET",queryString,true);
 		xmlhttp.send(null);
-		document.write(xmlhttp.responseText);
+		
 		xmlhttp.onreadystatechange = function(){
 			if(xmlhttp.readyState == 4){
-				//space.innerHTML = xmlhttp.responseText;
+				space.innerHTML = xmlhttp.responseText;
 			}
 		}
 	}
