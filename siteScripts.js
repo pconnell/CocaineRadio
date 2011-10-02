@@ -60,3 +60,5 @@ function log(){
 		}
 	}
 }
+
+body();
