@@ -134,7 +134,7 @@
 			include('login.php');
 		}
 	?>
-	<form action = ''>
-		<input type = 'submit' onClick = 'logout()'/>
+	<form action = 'logout.php'>
+		<input type = 'submit'/>
 	</form>
 </body>
