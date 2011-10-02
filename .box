@@ -5,7 +5,7 @@ index_list:
   - index.html
   - index.php
 permissions: 
-  /phpmyadmin:
+  /admin:
    - 72.205.2.22: allow
    - all: deny
 php_date_timezone: US/eastern
