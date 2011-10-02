@@ -22,7 +22,9 @@
 <!--
 	body here
 -->
-<body id = 'pb'>
+<body>
+	<p id = 'pb'></p>
+</body>
 <?php
     if (isset($_SESSION['username'])){
 		echo "<script type = 'text/javascript'>body();</script>";
@@ -32,8 +34,6 @@
 		//include('login.php');
 	}
 ?>
-</body>
-
 <!--
 	footer here
 -->
