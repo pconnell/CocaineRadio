@@ -18,7 +18,7 @@
 
 </body>
 
-<script>
+<script type = 'text/javascript'>
 	function myFun(){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
