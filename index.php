@@ -7,6 +7,7 @@
 ?>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script type = 'text/javascript' src = 'siteScripts.js'/>
 		<center>
 			<object id="fmp256" type="application/x-shockwave-flash" data="/flash/minicaster.swf" width="180" height="70">
