@@ -74,7 +74,7 @@ d.innerhtml=variable holding the text you wish to display
 		}
 	}
 	//update('/body.php','pageBody');
-	update('/body.php','body');
+	//update('/body.php','body');
 </script>
 <?php
 	if(isset($_SESSION['username'])){
