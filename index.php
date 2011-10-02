@@ -41,7 +41,7 @@
 </body>
 
 <?php
-	if (isset($_SESSION['username'])){
+/* (isset($_SESSION['username'])){
 		echo "<script>
 			     update('/body.php','pb');
 			  </script>";
@@ -49,7 +49,8 @@
 		echo "<script>
 			     update('/login.php','pb');
 			  </script>";
-	}
+	}*/
+	include('body.php');
 ?>
 
 <!--
