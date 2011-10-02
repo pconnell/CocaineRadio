@@ -27,10 +27,10 @@
 </body>
 <?php
     if (isset($_SESSION['username'])){
-		echo "<script type = 'text/javascript'>body();</script>";
+		echo "<script type = 'text/javascript'>update('/body.php','pb');/*body();*/</script>";
 		//include('body.php');
 	}else{
-		echo"<script type = 'text/javascript'>login();</script>";
+		echo"<script type = 'text/javascript'>update('/login.php','pb');/*login();*/</script>";
 		//include('login.php');
 	}
 ?>
