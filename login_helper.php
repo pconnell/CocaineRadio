@@ -12,14 +12,16 @@
 		if ($row['id'] != ''){
 			//echo "yay!<br/>";
 			$_SESSION['username'] = $row['username'];
-			$_SESSION['userID'] = $row['userID'];
+			$_SESSION['userID'] = $row['id'];
 			$_SESSION['email'] = $row['email'];
 			//include('header.php');
-			include('body.php');
+			//include('body.php');
+			echo "<script>ajax_update('/body.php','pageBody');</script>";
 		}else{
-			echo "<center><h2>incorrect login info, please try again</h2></center>";
+			//echo "<center><h2>incorrect login info, please try again</h2></center>";
 			//include('header.php');
-			include('login_form.php');
+			//include('login_form.php');
+			echo "<script>ajax_update('/login.php','pageBody');</script>";
 		}
 	}
 ?>
