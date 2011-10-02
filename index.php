@@ -35,8 +35,8 @@
 </head>
 
 <?php
-	session_start();
-	include('db.php');
+	//session_start();
+	//include('db.php');
 	//include('header.php');
 	//include('body.php');
 	if(isset($_SESSION['username'])){
@@ -140,13 +140,13 @@
 			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",file,true);
+		xmlhttp.open("GET",""+file,true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
 			if (xmlhttp.readyState==4)
 			{
-				document.getElementById(id).innerHTML=xmlhttp.responseText;
+				document.getElementById(""+id).innerHTML=xmlhttp.responseText;
 			}
 		}
 	}
