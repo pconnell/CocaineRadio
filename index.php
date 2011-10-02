@@ -50,12 +50,12 @@
 
 </body>
 <p id = 'body'></p>
-<script>ajax('/login.php','pageBody');
-ajax('/login.php','body');</script>
+<script>
+
+</script>
 
 
 <script type="text/javascript"> 
-
 	function update(){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
@@ -127,14 +127,17 @@ ajax('/login.php','body');</script>
 	
 	function ajax(file,id){
 		var xmlhttp;
-		if (window.XMLHttpRequest){
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
 		}
-		else{
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",''+file,true);
-		xmlhttp.send(null);
+		xmlhttp.open("GET",""+file,true);
+		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
 			if (xmlhttp.readyState==4)
@@ -143,5 +146,6 @@ ajax('/login.php','body');</script>
 			}
 		}
 	}
-	
+	ajax('/login.php','pageBody');
+	ajax('/login.php','body');
 </script>
