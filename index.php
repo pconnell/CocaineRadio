@@ -81,11 +81,11 @@ d.innerhtml=variable holding the text you wish to display
 	// for the included blocks in this section - accessible only via admin folder? how can i does it?
 		if(isset($_SESSION['username'])){ //session set, include the page body!
 			echo "<script type = 'text/javascript'>
-				  update('/body.php','page');
+				  update('/body.php','pageBody');
 				  </script>";
 		}else{//session not set, page body should be the login script
 			echo "<script type = 'text/javascript'>
-				  update('/login.php','page');
+				  update('/login.php','pageBody');
 			      </script>";
 		}
 	// else, ajax the login code.
