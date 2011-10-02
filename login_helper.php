@@ -2,6 +2,7 @@
 	session_start();
 ?>
 <?php
+	echo "in login_helper";
 	include('db.php');
 	$pw = $_GET['password'];
 	$user = $_GET['username'];
@@ -10,18 +11,15 @@
 	$result->setFetchMode(PDO::FETCH_ASSOC);
 	while($row = $result->fetch()){
 		if ($row['id'] != ''){
+		echo "in if";
 			//echo "yay!<br/>";
 			$_SESSION['username'] = $row['username'];
 			$_SESSION['userID'] = $row['id'];
 			$_SESSION['email'] = $row['email'];
-			//include('header.php');
-			//include('body.php');
-			echo "<script>ajax_update('/body.php','body');</script>";
+			//echo "<script>ajax_update('/body.php','body');</script>";
 		}else{
-			//echo "<center><h2>incorrect login info, please try again</h2></center>";
-			//include('header.php');
-			//include('login_form.php');
-			echo "<script>ajax_update('/login.php','body');</script>";
+			echo "in else";
+			//echo "<script>ajax_update('/login.php','body');</script>";
 		}
 	}
 ?>

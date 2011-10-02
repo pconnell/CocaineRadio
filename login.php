@@ -26,10 +26,10 @@
 		var queryString = "/login_helper.php?username="+username+"&password="+password;
 		xmlhttp.open("GET",queryString,true);
 		xmlhttp.send(null);
-		
+		document.write(xmlhttp.responseText);
 		xmlhttp.onreadystatechange = function(){
 			if(xmlhttp.readyState == 4){
-				space.innerHTML = xmlhttp.responseText;
+				//space.innerHTML = xmlhttp.responseText;
 			}
 		}
 	}
