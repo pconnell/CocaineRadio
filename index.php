@@ -18,6 +18,7 @@ d.innerhtml=variable holding the text you wish to display
 <html>
 <head>
 <title>AudioNarcotics</title>
+<center>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <object id="fmp256" type="application/x-shockwave-flash" data="/flash/minicaster.swf" width="180" height="70">
   <param name="movie" value="minicaster.swf" />
@@ -52,7 +53,7 @@ d.innerhtml=variable holding the text you wish to display
 	</thead>
 </table>
 <p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here (less jumpy)</a></p>
-
+</center>
 
 <!-- header include somewhere in here
 	 or should i just put the head code here?
@@ -87,7 +88,7 @@ d.innerhtml=variable holding the text you wish to display
 				  ajax_update('/body.php','pageBody');
 				  </script>";
 		}else{//session not set, page body should be the login script
-			echo "<script type = 'text/javascript>
+			echo "<script type = 'text/javascript'>
 				  ajax_upate('/login.php','pageBody');
 			      </script>";
 		}
