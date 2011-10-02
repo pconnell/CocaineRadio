@@ -13,10 +13,10 @@
 	<script type = 'text/javascript'>
 	
 
-	function myFun(){
-		document.getElementById('whee').innerHTML = "hello world!";
+	/*function myFun(){
+		//document.getElementById('whee').innerHTML = "hello world!";
 	}
-	myFun();
+	myFun();*/
 </script>
 </head>
 <!--
@@ -31,9 +31,6 @@
 	}
 ?>
 </body>
-
-
-
 
 <!--
 	footer here
