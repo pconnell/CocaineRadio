@@ -25,9 +25,11 @@
 <body id = 'pb'>
 <?php
     if (isset($_SESSION['username'])){
-		include('body.php');
+		echo "<script type = 'text/javascript'>body();</script>";
+		//include('body.php');
 	}else{
-		include('login.php');
+		echo"<script type = 'text/javascript'>login();</script>";
+		//include('login.php');
 	}
 ?>
 </body>
