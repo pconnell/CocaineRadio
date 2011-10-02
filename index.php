@@ -15,9 +15,9 @@
 
 <?php
 	if(isset($_SESSION['username'])){
-		echo "<script>ajax_update('/body.php','pageBody')</script>";
+		echo "<script>ajax_update('/body.php','pageBody');</script>";
 	}else{
-		echo "<script>ajax_update('/login.php','pageBody')</script>"
+		echo "<script>ajax_update('/login.php','pageBody');</script>";
 	}
 ?>
 
