@@ -76,7 +76,13 @@ d.innerhtml=variable holding the text you wish to display
 	//update('/body.php','pageBody');
 	update('/body.php','body');
 </script>
-
+<?php
+	if(isset($_SESSION['username'])){
+		echo "<script>update('/body.php','body');</script>";
+	}else{
+		echo "<script>update('/login.php','body');</script>";
+	}
+?>
 <footer>
 <!-- come up with something catchy to put in here.
 -->
