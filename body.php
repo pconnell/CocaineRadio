@@ -1,6 +1,3 @@
-<html>
-<body id = 'pageBody'>
-
 <form action = ''>
 	<input type = 'submit' name = 'Logout' onClick = "ajax_update('/logout.php','pageBody')"/>
 </form>
@@ -39,7 +36,3 @@
 </tfoot>
 </table>
 </center>
-<p id = 'successtext'>
-</p>
-</body>
-</html>

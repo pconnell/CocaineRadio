@@ -122,6 +122,6 @@
 	}
 	
 </script>
-
+<body id = 'pageBody'></body>
 </head>
 
