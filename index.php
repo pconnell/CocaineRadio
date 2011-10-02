@@ -19,7 +19,7 @@
 </body>
 
 <?php
-/* (isset($_SESSION['username'])){
+    if (isset($_SESSION['username'])){
 		echo "<script>
 			     update('/body.php','pb');
 			  </script>";
@@ -27,7 +27,7 @@
 		echo "<script>
 			     update('/login.php','pb');
 			  </script>";
-	}*/
+	}
 ?>
 
 <!--
