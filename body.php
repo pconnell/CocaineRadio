@@ -36,30 +36,3 @@
 </tfoot>
 </table>
 </center>
-<p id = 'successtext'>
-</p>
-<script type="text/javascript"> 
-	
-	function logout(){
-		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-			//document.write("XMLHttp");
-		}
-		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open("GET","/logout.php",true);
-		xmlhttp.send();
-		xmlhttp.onreadystatechange=function()
-		{
-			if (xmlhttp.readyState==4)
-			{
-				document.getElementById('body').innerHTML=xmlhttp.responseText;
-			}
-		}
-	}
-</script>
