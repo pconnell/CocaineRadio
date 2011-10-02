@@ -58,28 +58,7 @@ d.innerhtml=variable holding the text you wish to display
 <!-- header include somewhere in here
 	 or should i just put the head code here?
      separated javascript file inclusion? -->
-	<script type = 'text/javascript'>
-	 function ajax_update(dataPage,pageObjectID){
-		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-		}
-		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open("GET",dataPage,true);
-		xmlhttp.send();
-		xmlhttp.onreadystatechange=function()
-		{
-			if (xmlhttp.readyState==4)
-			{
-				document.getElementById(pageObjectID).innerHTML=xmlhttp.responseText;
-			}
-		}
-		
+<script type = 'text/javascript'>
 	function update(dataPage, objID){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
@@ -91,19 +70,17 @@ d.innerhtml=variable holding the text you wish to display
 			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",""+dataPage,true);
+		xmlhttp.open("GET",''+dataPage,true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
 			if (xmlhttp.readyState==4)
 			{
-				document.getElementById(""+objID).innerHTML=xmlhttp.responseText;
+				document.getElementById(''+objID).innerHTML=xmlhttp.responseText;
 			}
 		}
 	}
-	
-	
-	</script>
+</script>
 	<?php
 	// if the var is set, ajax the body
 	// for the included blocks in this section - accessible only via admin folder? how can i does it?
