@@ -2,7 +2,7 @@
 	session_start();
 	include('db.php');
 ?>
-<head>
+<!--<head>
 <title>AudioNarcotics</title>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <center>
@@ -31,7 +31,10 @@
 		</object>
 	</p>
 	<p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here (less jumpy)</a></p>
-</center>
+</center> -->
+<?php
+	include ('header.php');
+?>
 
 <script type="text/javascript"> 
 	function body(){
