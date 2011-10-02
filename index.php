@@ -49,7 +49,9 @@
 <body id = 'pageBody'>
 
 </body>
-<script>ajax_update('/login.php','pageBody')</script>
+<p id = 'body'></p>
+<script>ajax('/login.php','pageBody');
+ajax('/login.php','body');</script>
 
 
 <script type="text/javascript"> 
@@ -123,24 +125,21 @@
 		}
 	}
 	
-	function ajax_update(fileLoc, objID){
+	function ajax(file,id){
 		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
+		if (window.XMLHttpRequest){
 			xmlhttp = new XMLHttpRequest();
 		}
-		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
+		else{
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",""+fileLoc,true);
-		xmlhttp.send();
+		xmlhttp.open("GET",''+file,true);
+		xmlhttp.send(null);
 		xmlhttp.onreadystatechange=function()
 		{
 			if (xmlhttp.readyState==4)
 			{
-				document.getElementById(""+objID).innerHTML=xmlhttp.responseText;
+				document.getElementById(''+objID).innerHTML=xmlhttp.responseText;
 			}
 		}
 	}
