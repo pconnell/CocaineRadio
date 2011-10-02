@@ -15,9 +15,9 @@
 
 <?php
 	if(isset($_SESSION['username'])){
-		echo "<script>ajax_update('/body.php','pageBody');</script>";
+		echo "<script>update('/body.php','pageBody');</script>";
 	}else{
-		echo "<script>ajax_update('/login.php','pageBody');</script>";
+		echo "<script>update('/login.php','pageBody');</script>";
 	}
 ?>
 
@@ -30,7 +30,7 @@
 </footer>
 
 <script>
-function ajax_update(dataPage,pageObjectID){
+/*function ajax_update(dataPage,pageObjectID){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -49,5 +49,26 @@ function ajax_update(dataPage,pageObjectID){
 			{
 				document.getElementById(''+pageObjectID).innerHTML=xmlhttp.responseText;
 			}
+		}*/
+		
+	function update(page,objID){
+	var xmlhttp;
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp = new XMLHttpRequest();
 		}
+		else
+		{
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET",""+page,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById(""+objID).innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
 </script>
