@@ -123,13 +123,13 @@
 	
 </script>
 <?php
-	if(isset($_SESSION[''])){
+	if(isset($_SESSION['username'])){
 		echo "<script>body();</script>;";
 	}else{
 		echo "<script>log();</script>;";
 	}
 ?>
-
-<body id = 'pageBody'></body>
 </head>
+<body id = 'pageBody'></body>
+
 
