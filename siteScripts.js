@@ -83,4 +83,3 @@ function log(){
 			}
 		}
 	}
-	setInterval(update,1000);
