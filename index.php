@@ -32,62 +32,19 @@
 	</p>
 	<p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here (less jumpy)</a></p>
 </center>
-</head>
-
-<?php
-	//session_start();
-	//include('db.php');
-	//include('header.php');
-	//include('body.php');
-	if(isset($_SESSION['username'])){
-		//include('body.php');
-		echo "<script>setLogin();</script>";
-	}else{
-		//include('login.php');
-		echo "<script>setBody();</script>";
-	}
-?>
-
-<body id = 'pageBody'>
-
-</body>
-
 
 <script type="text/javascript"> 
-	function setBody(/*data*/){
+	function body(){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-		}
-		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open("GET",'/body.php',true);
-		xmlhttp.send();
-		xmlhttp.onreadystatechange=function()
 		{
-			if (xmlhttp.readyState==4)
-			{
-				document.getElementById('pageBody').innerHTML=xmlhttp.responseText;
-			}
-		}
-	
-	}
-	function setLogin(){
-		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
 		}
 		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
+		{
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",'/login.php',true);
+		xmlhttp.open("GET","/body.php",true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
@@ -98,9 +55,27 @@
 		}
 	}
 	
-//	setBody('/body.php');
+	function log(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/login.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('pageBody').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
 	
-
 	function update(){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
@@ -123,10 +98,6 @@
 		}
 	}
 	setInterval(update,1000);
-	
-	function upload(){
-
-	}
 	
 	function logout(){
 		var xmlhttp;
@@ -151,27 +122,21 @@
 		}
 	}
 	
-	function ajax(file,id){
-		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-		}
-		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open("GET",""+file,true);
-		xmlhttp.send();
-		xmlhttp.onreadystatechange=function()
-		{
-			if (xmlhttp.readyState==4)
-			{
-				document.getElementById(""+id).innerHTML=xmlhttp.responseText;
-			}
-		}
-	}
-	//ajax('/login.php','pageBody');
-	//ajax('/login.php','body');
 </script>
+
+</head>
+
+<?php
+	if(isset($_SESSION['username'])){
+		//put in body
+		echo "<script>body();</script>";
+	}else{
+		//put in login
+		echo "<script>log();</script>";
+	}
+?>
+
+<body id = 'pageBody'>
+
+</body>
+
