@@ -122,14 +122,15 @@
 	}
 	
 </script>
+</head>
+
+<body id = 'pageBody'>
+</body>
+
 <?php
 	if(isset($_SESSION['username'])){
-		echo "<script>body();</script>;";
+		echo "<script>body();</script>";
 	}else{
-		echo "<script>log();</script>;";
+		echo "<script>log();</script>";
 	}
 ?>
-</head>
-<body id = 'pageBody'></body>
-
-
