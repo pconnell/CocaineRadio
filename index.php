@@ -47,10 +47,10 @@ d.innerhtml=variable holding the text you wish to display
 </center>
 
 <p id = 'body'></p>
+</head>
+<body id = 'pageBody'>
 
-<!-- header include somewhere in here
-	 or should i just put the head code here?
-     separated javascript file inclusion? -->
+</body>
 <script type = 'text/javascript'>
 	function update(dataPage, objID){
 		var xmlhttp;
@@ -73,33 +73,9 @@ d.innerhtml=variable holding the text you wish to display
 			}
 		}
 	}
-	//update('/body.php','body');
+	//update('/body.php','pageBody');
+	update('/body.php','body');
 </script>
-
-	<?php
-	// if the var is set, ajax the body
-	// for the included blocks in this section - accessible only via admin folder? how can i does it?
-		if(isset($_SESSION['username'])){ //session set, include the page body!
-			echo "<script type = 'text/javascript'>
-				  update('/body.php','pageBody');
-				  </script>";
-		}else{//session not set, page body should be the login script
-			echo "<script type = 'text/javascript'>
-				  update('/login.php','pageBody');
-			      </script>";
-		}
-	// else, ajax the login code.
-	?>
-	
-</head>
-
-<body id = 'pageBody'>
-
-</body>
-
-
-
-
 
 <footer>
 <!-- come up with something catchy to put in here.
