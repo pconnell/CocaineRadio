@@ -8,13 +8,13 @@ function update(data,obj){
 	{
 	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	xmlhttp.open("GET",''+data,true);
+	xmlhttp.open("GET",""+data,true);
 	xmlhttp.send();
 	xmlhttp.onreadystatechange=function()
 	{
 		if (xmlhttp.readyState==4)
 		{
-			document.getElementById(''+obj).innerHTML=xmlhttp.responseText;
+			document.getElementById(""+obj).innerHTML=xmlhttp.responseText;
 		}
 	}
 }
@@ -29,7 +29,7 @@ function body(){
 	{
 	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	xmlhttp.open("GET",'/body.php',true);
+	xmlhttp.open("GET",'body.php',true);
 	xmlhttp.send();
 	xmlhttp.onreadystatechange=function()
 	{
@@ -50,15 +50,14 @@ function log(){
 	{
 	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 	}
-	xmlhttp.open("GET",'/login.php',true);
+	xmlhttp.open("GET","login.php",true);
 	xmlhttp.send();
 	xmlhttp.onreadystatechange=function()
 	{
 		if (xmlhttp.readyState==4)
 		{
-			document.getElementById('pb').innerHTML=xmlhttp.responseText;
+			document.getElementById("pb").innerHTML=xmlhttp.responseText;
 		}
 	}
 }
 
-body();
