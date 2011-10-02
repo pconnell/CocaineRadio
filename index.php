@@ -125,12 +125,21 @@
 </head>
 
 <body id = 'pageBody'>
+	<?php
+		if(isset($_SESSION['username'])){
+			//echo "<script>body();</script>";
+			include('body.php');
+		}else{
+			//echo "<script>log();</script>";
+			include('login.php');
+		}
+	?>
 </body>
 
 <?php
 	if(isset($_SESSION['username'])){
-		echo "<script>body();</script>";
+		//echo "<script>body();</script>";
 	}else{
-		echo "<script>log();</script>";
+		//echo "<script>log();</script>";
 	}
 ?>
