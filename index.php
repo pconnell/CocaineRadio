@@ -134,12 +134,7 @@
 			include('login.php');
 		}
 	?>
+	<form action = ''>
+		<input type = 'submit' onClick = 'logout()'/>
+	</form>
 </body>
-
-<?php
-	if(isset($_SESSION['username'])){
-		//echo "<script>body();</script>";
-	}else{
-		//echo "<script>log();</script>";
-	}
-?>
