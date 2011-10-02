@@ -139,7 +139,7 @@ ajax('/login.php','body');</script>
 		{
 			if (xmlhttp.readyState==4)
 			{
-				document.getElementById(''+objID).innerHTML=xmlhttp.responseText;
+				document.getElementById(''+id).innerHTML=xmlhttp.responseText;
 			}
 		}
 	}
