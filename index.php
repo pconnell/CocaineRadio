@@ -31,7 +31,10 @@ d.innerhtml=variable holding the text you wish to display
 
 <?php
 	if(isset($_SESSION['username'])){
-		echo "Welcome, "."$_SESSION['username']"."!";
+		//echo "Welcome, "."$_SESSION['username']"."!";
+		echo "Welcome, ";
+		echo $_SESSION['username'];
+		echo '!<br/>';
 	}
 ?>
 
