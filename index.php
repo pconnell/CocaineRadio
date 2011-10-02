@@ -79,17 +79,41 @@ d.innerhtml=variable holding the text you wish to display
 				document.getElementById(pageObjectID).innerHTML=xmlhttp.responseText;
 			}
 		}
+		
+	function update(dataPage, objID){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET",""+dataPage,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById(""+objID).innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	
+	
 	</script>
 	<?php
 	// if the var is set, ajax the body
 	// for the included blocks in this section - accessible only via admin folder? how can i does it?
 		if(isset($_SESSION['username'])){ //session set, include the page body!
 			echo "<script type = 'text/javascript'>
-				  ajax_update('/body.php','pageBody');
+				  update('/body.php','pageBody');
 				  </script>";
 		}else{//session not set, page body should be the login script
 			echo "<script type = 'text/javascript'>
-				  ajax_upate('/login.php','pageBody');
+				  update('/login.php','pageBody');
 			      </script>";
 		}
 	// else, ajax the login code.
