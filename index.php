@@ -75,6 +75,7 @@ d.innerhtml=variable holding the text you wish to display
 	}
 	//update('/body.php','body');
 </script>
+
 	<?php
 	// if the var is set, ajax the body
 	// for the included blocks in this section - accessible only via admin folder? how can i does it?
@@ -92,14 +93,16 @@ d.innerhtml=variable holding the text you wish to display
 	
 </head>
 
-<body id = 'page'>
+<body id = 'pageBody'>
+
 </body>
+
+
+
+
 
 <footer>
 <!-- come up with something catchy to put in here.
 -->
-<table>
-
-</table>
 </footer>
 </html>
