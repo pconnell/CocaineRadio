@@ -18,11 +18,12 @@
 
 </body>
 
+<p id = "whee"></p>
 <script type = 'text/javascript'>
 	
 
 	function myFun(){
-		document.getElementById('pb').innerHTML = "hello world!";
+		document.getElementById('whee').innerHTML = "hello world!";
 	}
 	myFun();
 </script>
