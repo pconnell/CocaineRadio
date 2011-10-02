@@ -21,11 +21,13 @@
 <?php
     if (isset($_SESSION['username'])){
 		echo "<script>
-			     update('/body.php','pb');
+				 body();
+			     //update('/body.php','pb');
 			  </script>";
 	}else{
 		echo "<script>
-			     update('/login.php','pb');
+				 log();
+			     //update('/login.php','pb');
 			  </script>";
 	}
 ?>
