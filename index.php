@@ -49,10 +49,6 @@
 <body id = 'pageBody'>
 
 </body>
-<p id = 'body'></p>
-<script>
-
-</script>
 
 
 <script type="text/javascript"> 
@@ -147,5 +143,5 @@
 		}
 	}
 	ajax('/login.php','pageBody');
-	ajax('/login.php','body');
+	//ajax('/login.php','body');
 </script>
