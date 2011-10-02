@@ -126,13 +126,13 @@
 			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",fileLoc,true);
+		xmlhttp.open("GET",''+fileLoc,true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
 			if (xmlhttp.readyState==4)
 			{
-				document.getElementById(objID).innerHTML=xmlhttp.responseText;
+				document.getElementById(''+objID).innerHTML=xmlhttp.responseText;
 			}
 		}
 	}
