@@ -128,7 +128,8 @@
 	<?php
 		if(isset($_SESSION['username'])){
 			//echo "<script>body();</script>";
-			echo "<h1>$_SESSION['username']</h1>";
+			$name = $_SESSION['username'];
+			echo "<h1>$name</h1>";
 			include('body.php');
 		}else{
 			//echo "<script>log();</script>";
