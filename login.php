@@ -11,7 +11,7 @@
 		var form = document.getElementById('log');
 		var username = form.username.value;
 		var password = form.password.value;
-		var space = document.getElementById('pageBody');
+		var space = document.getElementById('body');
 		var xmlhttp;
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari

@@ -16,12 +16,12 @@
 			$_SESSION['email'] = $row['email'];
 			//include('header.php');
 			//include('body.php');
-			echo "<script>ajax_update('/body.php','pageBody');</script>";
+			echo "<script>ajax_update('/body.php','body');</script>";
 		}else{
 			//echo "<center><h2>incorrect login info, please try again</h2></center>";
 			//include('header.php');
 			//include('login_form.php');
-			echo "<script>ajax_update('/login.php','pageBody');</script>";
+			echo "<script>ajax_update('/login.php','body');</script>";
 		}
 	}
 ?>
