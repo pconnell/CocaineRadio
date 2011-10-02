@@ -15,12 +15,12 @@
 
 <?php
 	if(isset($_SESSION['username'])){
-		echo "<script>update('/body.php','pageBody');</script>";
+		echo "<script>update('/body.php','body');</script>";
 	}else{
-		echo "<script>update('/login.php','pageBody');</script>";
+		echo "<script>update('/login.php','body');</script>";
 	}
 ?>
-
+<p id = 'body'></p>
 <body id = 'pageBody'>
 	
 </body>
@@ -29,46 +29,26 @@
 	
 </footer>
 
-<script>
-/*function ajax_update(dataPage,pageObjectID){
-		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-		}
-		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open("GET",''+dataPage,true);
-		xmlhttp.send();
-		xmlhttp.onreadystatechange=function()
-		{
-			if (xmlhttp.readyState==4)
-			{
-				document.getElementById(''+pageObjectID).innerHTML=xmlhttp.responseText;
-			}
-		}*/
-		
+<script>	
 	function update(page,objID){
-	var xmlhttp;
-		if (window.XMLHttpRequest)
-		{
-			xmlhttp = new XMLHttpRequest();
-		}
-		else
-		{
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open("GET",""+page,true);
-		xmlhttp.send();
-		xmlhttp.onreadystatechange=function()
-		{
-			if (xmlhttp.readyState==4)
+		var xmlhttp;
+			if (window.XMLHttpRequest)
 			{
-				document.getElementById(""+objID).innerHTML=xmlhttp.responseText;
+				xmlhttp = new XMLHttpRequest();
 			}
-		}
+			else
+			{
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.open("GET",''+page,true);
+			xmlhttp.send();
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4)
+				{
+					document.getElementById(''+objID).innerHTML=xmlhttp.responseText;
+				}
+			}
 	}
+	
 </script>
