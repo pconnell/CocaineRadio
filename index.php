@@ -10,16 +10,7 @@
 	<?php
 		include('header.php');
 	?>
-</head>
-<!--
-	body here
--->
-<body id = 'pb'>
-
-</body>
-
-<p id = "whee"></p>
-<script type = 'text/javascript'>
+	<script type = 'text/javascript'>
 	
 
 	function myFun(){
@@ -27,21 +18,22 @@
 	}
 	myFun();
 </script>
-
-
+</head>
+<!--
+	body here
+-->
+<body id = 'pb'>
 <?php
-    /*if (isset($_SESSION['username'])){
-		echo "<script>
-				 //body();
-			     update('body.php','pb');
-			  </script>";
+    if (isset($_SESSION['username'])){
+		include('body.php');
 	}else{
-		echo "<script>
-				 //log();
-			     update('login.php','pb');
-			  </script>";
-	}*/
+		include('login.php');
+	}
 ?>
+</body>
+
+
+
 
 <!--
 	footer here
