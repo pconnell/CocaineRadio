@@ -1,4 +1,3 @@
-
 <div id = 'login'>
 <center>
 		<h1>Please log-in to upload, vote, and view play history!</h1>
