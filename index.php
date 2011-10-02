@@ -1,10 +1,11 @@
+<?php
+	session_start();
+	include('db.php');
+?>
 <head>
 <title>AudioNarcotics</title>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <center>
-<!--<img src = "/cocaineradio/cokeradio.jpg" valign = 'middle'/>
-<img src = '/cocaineradio/fix.jpg' align = 'left' valign='middle'/>
-<img src = '/cocaineradio/fix.jpg' align = 'right' valign='middle'/> -->
 	<table id = 'projectData'>
 		<thead>
 			<tr>
@@ -17,25 +18,35 @@
 		</thead>
 	</table>
 	<p id = "player">
-		<?php
-			include('player.php');
-		?>
-	</p></tr>
+		<object id="fmp256" type="application/x-shockwave-flash" data="/flash/minicaster.swf" width="180" height="70">
+		  <param name="movie" value="minicaster.swf" />
+
+		  <param name="wmode" value="transparent" />
+		   <div class="stirfry">
+		   <h4>Minicaster Radio Playhead</h4>
+		   <p>To listen you must <a href="http://www.macromedia.com/go/getflashplayer/"
+		   title="Click here to install the Flash browser plugin from Macromedia">install Flash Player</a>. Visit
+		   <a href="http://www.draftlight.net/dnex/mp3player/minicaster/" title="Draftlight Networks">Draftlight Networks</a>
+		   for more info.</p></div>
+		</object>
+	</p>
 	<p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here (less jumpy)</a></p>
 </center>
 </head>
 
 <?php
-	session_start();
+	/*session_start();
 	include('db.php');
 	//include('header.php');
-	//include('body.php');*/
+	//include('body.php');
 	if(isset($_SESSION['username'])){
 		include('body.php');
 	}else{
 		include('login.php');
-	}
+	}*/
 ?>
+
+<script>ajax_update('/login.php','pageBody')</script>
 
 
 <script type="text/javascript"> 
