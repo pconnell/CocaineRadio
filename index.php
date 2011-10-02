@@ -32,15 +32,6 @@ d.innerhtml=variable holding the text you wish to display
    for more info.</p></div>
 </object>
 
-<?php
-	if(isset($_SESSION['username'])){
-		//echo "Welcome, "."$_SESSION['username']"."!";
-		echo "Welcome, ";
-		echo $_SESSION['username'];
-		echo '!<br/>';
-	}
-?>
-
 <table id = 'projectData'>
 	<thead>
 		<tr>
@@ -54,6 +45,8 @@ d.innerhtml=variable holding the text you wish to display
 </table>
 <p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here (less jumpy)</a></p>
 </center>
+
+<p id = 'body'></p>
 
 <!-- header include somewhere in here
 	 or should i just put the head code here?
@@ -80,7 +73,7 @@ d.innerhtml=variable holding the text you wish to display
 			}
 		}
 	}
-	update('/body.php','pageBody');
+	update('/body.php','body');
 </script>
 	<?php
 	// if the var is set, ajax the body
