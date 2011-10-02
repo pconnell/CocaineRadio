@@ -41,6 +41,8 @@
 </center>
 <p id = 'successtext'>
 </p>
+
+<!-->
 <script type="text/javascript"> 
 	function update(){
 		var xmlhttp;
@@ -135,5 +137,6 @@
 	}
 	
 </script>
+-->
 </body>
 </html>
