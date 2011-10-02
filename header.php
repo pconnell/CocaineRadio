@@ -1,23 +1,7 @@
-<?php
-	include('db.php');
-	$query = "SELECT * FROM users;";
-	$result = $DB->query($query);
-	if (!$result){
-		echo "<h1>aw...</h1><br/>";
-	}
-	$result->setFetchMode(PDO::FETCH_ASSOC);
-	while ($row = $result->fetch()){
-		echo "<br/><h1>".$row['username']."</h1>";
-	}
-?>
-<html>
 <head>
 <title>AudioNarcotics</title>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <center>
-<!--<img src = "/cocaineradio/cokeradio.jpg" valign = 'middle'/>
-<img src = '/cocaineradio/fix.jpg' align = 'left' valign='middle'/>
-<img src = '/cocaineradio/fix.jpg' align = 'right' valign='middle'/> -->
 	<table id = 'projectData'>
 		<thead>
 			<tr>
@@ -30,11 +14,110 @@
 		</thead>
 	</table>
 	<p id = "player">
-		<?php
-			include('player.php');
-		?>
-	</p></tr>
+		<object id="fmp256" type="application/x-shockwave-flash" data="/flash/minicaster.swf" width="180" height="70">
+		  <param name="movie" value="minicaster.swf" />
+
+		  <param name="wmode" value="transparent" />
+		   <div class="stirfry">
+		   <h4>Minicaster Radio Playhead</h4>
+		   <p>To listen you must <a href="http://www.macromedia.com/go/getflashplayer/"
+		   title="Click here to install the Flash browser plugin from Macromedia">install Flash Player</a>. Visit
+		   <a href="http://www.draftlight.net/dnex/mp3player/minicaster/" title="Draftlight Networks">Draftlight Networks</a>
+		   for more info.</p></div>
+		</object>
+	</p>
 	<p><a href = "http://72.205.2.22:8000/listen.pls?sid=1">Download podcast here (less jumpy)</a></p>
 </center>
+
+<script type="text/javascript"> 
+	function body(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/body.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('pageBody').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	
+	function log(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/login.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('pageBody').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	
+	function update(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/pls.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('playlist').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	setInterval(update,1000);
+	
+	function logout(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+			//document.write("XMLHttp");
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/logout.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById('pageBody').innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	
+</script>
+
 </head>
-</html>
