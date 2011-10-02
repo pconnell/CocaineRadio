@@ -40,9 +40,11 @@
 	//include('header.php');
 	//include('body.php');
 	if(isset($_SESSION['username'])){
-		include('body.php');
+		//include('body.php');
+		echo "<script>ajax('/body.php','pageBody')</script>";
 	}else{
-		include('login.php');
+		//include('login.php');
+		echo "<script>ajax('/login.php','pageBody')</script>";
 	}
 ?>
 
@@ -101,26 +103,7 @@
 	setInterval(update,1000);
 	
 	function upload(){
-		var xmlhttp;
-		if (window.XMLHttpRequest)
-		{// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-			//document.write("XMLHttp");
-		}
-		else
-		{// code for IE6, IE5
-			//write("ActiveXObject");
-		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		xmlhttp.open("GET","/upload.php",true);
-		xmlhttp.send();
-		xmlhttp.onreadystatechange=function()
-		{
-			if (xmlhttp.readyState==4)
-			{
-				document.getElementById('successtext').innerHTML=xmlhttp.responseText;
-			}
-		}
+
 	}
 	
 	function logout(){
@@ -141,7 +124,7 @@
 		{
 			if (xmlhttp.readyState==4)
 			{
-				document.getElementById('body').innerHTML=xmlhttp.responseText;
+				document.getElementById('pageBody').innerHTML=xmlhttp.responseText;
 			}
 		}
 	}
@@ -157,13 +140,13 @@
 			//write("ActiveXObject");
 		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 		}
-		xmlhttp.open("GET",""+file,true);
+		xmlhttp.open("GET",file,true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange=function()
 		{
 			if (xmlhttp.readyState==4)
 			{
-				document.getElementById(''+id).innerHTML=xmlhttp.responseText;
+				document.getElementById(id).innerHTML=xmlhttp.responseText;
 			}
 		}
 	}
