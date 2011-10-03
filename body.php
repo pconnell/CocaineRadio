@@ -20,6 +20,7 @@ echo "
 		<td>
 			<p id = 'uploader'>
 				<a href='http://dropitto.me/pconnell89' target = '_blank'>Upload via this external website</a>
+				password is 'correcthorsebatterystaple'
 			</p>
 		</td>
 	</tr>
