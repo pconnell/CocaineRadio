@@ -8,10 +8,8 @@
 No no no...
 </BODY>
 </HTML>";
-	}
-?>
-
-<center>
+	}else{
+		echo "<center>
 <form method = 'get' action = 'javascript:logout();'>
 	<input type = 'submit' value = 'logout'/>
 </form>
@@ -30,7 +28,7 @@ No no no...
 		<td></td>
 		<td>
 			<p id = 'uploader'>
-				<form method = 'POST' action = "upload()">
+				<form method = 'POST' action = 'upload()'>
 					<input type = 'text' id = 'toUpload'></input>
 					<input type = 'submit' id = 'pushMe'></input>
 				</form>
@@ -51,3 +49,7 @@ No no no...
 <script type = 'text/javascript'>
 	setInterval(pls(),1000);
 </script>
+";
+	}
+?>
+
