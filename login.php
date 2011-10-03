@@ -4,7 +4,7 @@
 		<form id = 'log' method = 'get' action = 'javascript:login();'>
 		Username:<input type = 'text' id = 'username' style='vertical-align:middle'/>
 		Password:<input type = 'password' id = 'password'/>
-		<input type = 'submit' id = 'submit' value = 'login'/>
+		<input type = 'submit' id = 'submit' value = 'login' onClick = 'login();'/>
 	</form>
 </center>
 <script>
