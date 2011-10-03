@@ -1,5 +1,5 @@
 <form action = ''>
-	<input type = 'submit' name = 'Logout' onClick = "ajax_update('/logout.php','pageBody')"/>
+	<input type = 'submit' value = 'logout' onClick = "logout()"/>
 </form>
 
 <center>

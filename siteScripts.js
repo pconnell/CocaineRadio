@@ -21,47 +21,54 @@ function update(data,obj){
 	}
 }
 
-function body(){
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{
-		xmlhttp = new XMLHttpRequest();
-	}
-	else
-	{
-	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.open("GET",'body.php',true);
-	xmlhttp.send();
-	xmlhttp.onreadystatechange=function()
-	{
-		if (xmlhttp.readyState==4)
+function logout(){
+	update('/logout.php','pb');
+}
+	
+	function log(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/login.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
 		{
-			document.getElementById('pb').innerHTML=xmlhttp.responseText;
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById("pb").innerHTML=xmlhttp.responseText;
+			}
 		}
 	}
-}
-
-function log(){
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{
-		xmlhttp = new XMLHttpRequest();
-	}
-	else
-	{
-	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.open("GET","login.php",true);
-	xmlhttp.send();
-	xmlhttp.onreadystatechange=function()
-	{
-		if (xmlhttp.readyState==4)
+	
+	function body(){
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		}
+		else
+		{// code for IE6, IE5
+			//write("ActiveXObject");
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET","/body.php",true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
 		{
-			document.getElementById("pb").innerHTML=xmlhttp.responseText;
+			if (xmlhttp.readyState==4)
+			{
+				document.getElementById("pb").innerHTML=xmlhttp.responseText;
+			}
 		}
 	}
-}
+	
 	function pls(){
 		var xmlhttp;
 		if (window.XMLHttpRequest)
@@ -83,3 +90,4 @@ function log(){
 			}
 		}
 	}
+	
