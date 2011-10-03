@@ -6,7 +6,9 @@
 	$pw = $_GET['password'];
 	$user = $_GET['username'];
 	$query = "SELECT * FROM users WHERE username = '$user' AND pass = SHA('$pw');";
-	$result = $DB->query($query);
+	$prep = $DB->prepare($query);
+	$result = $prep->execute();
+	//$result = $DB->query($query);
 	$result->setFetchMode(PDO::FETCH_ASSOC);
 	$val = false;
 	while($row = $result->fetch()){
