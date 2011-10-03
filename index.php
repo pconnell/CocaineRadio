@@ -27,6 +27,8 @@
 </body>
 <?php
     if (isset($_SESSION['username'])){
+		$name = $_SESSION['username'];
+		echo "<p>".$name."</p>";
 		echo "<script type = 'text/javascript'>update('/body.php','pb');/*body();*/</script>";
 		//include('body.php');
 	}else{
