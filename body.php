@@ -9,7 +9,8 @@ No no no...
 </BODY>
 </HTML>";
 	}else{
-		echo "<center>
+		echo "
+<center>
 <form method = 'get' action = 'javascript:logout();'>
 	<input type = 'submit' value = 'logout'/>
 </form>
@@ -47,7 +48,7 @@ No no no...
 </table>
 </center>
 <script type = 'text/javascript'>
-	setInterval(pls(),1000);
+	setInterval(update('/pls.php','playlist'),1000);
 </script>
 ";
 	}
