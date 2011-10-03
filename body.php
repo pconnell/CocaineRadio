@@ -41,6 +41,5 @@ echo "
 	setInterval(update('/pls.php','playlist'),1000);
 </script>
 ";
-	}
 ?>
 
