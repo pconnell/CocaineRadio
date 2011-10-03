@@ -1,7 +1,7 @@
 function update(data,obj){
 	var xmlhttp;
-	document.write(data);
-	document.write(obj);
+	//document.write(data);
+	//document.write(obj);
 	if (window.XMLHttpRequest)
 	{
 		xmlhttp = new XMLHttpRequest();
