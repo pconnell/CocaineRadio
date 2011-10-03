@@ -1,11 +1,10 @@
-
 <center>
 		<h1>Please log-in to upload, vote, and view play history!</h1>
-		<form id = 'log' <!--method = 'get' action = 'javascript:login();'-->>
-		Username:<input type = 'text' id = 'username' style='vertical-align:middle'/>
-		Password:<input type = 'password' id = 'password'/>
-		<input type = 'submit' value = 'login' onClick = 'login();'/>
-	</form>
+		<form id = 'log' method = 'get' action = 'javascript:login();'>
+			Username:<input type = 'text' id = 'username' style='vertical-align:middle'/>
+			Password:<input type = 'password' id = 'password'/>
+			<input type = 'submit' value = 'login'/>
+		</form>
 </center>
 <script>
 	function login(){
@@ -13,6 +12,7 @@
 		var username = form.username.value;
 		var password = form.password.value;
 		var space = document.getElementById('pb');
+		space.innerHTML = "<h1>hello!</h1>"
 		var xmlhttp;
 		if (window.XMLHttpRequest)
 		{// code for IE7+, Firefox, Chrome, Opera, Safari
