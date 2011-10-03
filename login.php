@@ -1,3 +1,4 @@
+<div id = 'login'>
 <center>
 		<h1>Please log-in to upload, vote, and view play history!</h1>
 		<form id = 'log' method = 'get' action = 'javascript:login();'>
@@ -6,12 +7,13 @@
 			<input type = 'submit' value = 'login'/>
 		</form>
 </center>
+</div>
 <script>
 	function login(){
 		var form = document.getElementById('log');
 		var username = form.username.value;
 		var password = form.password.value;
-		var space = document.getElementById('pb');
+		var space = document.getElementById('login');
 		space.innerHTML = "<h1>hello!</h1>"
 		var xmlhttp;
 		if (window.XMLHttpRequest)
