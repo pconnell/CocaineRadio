@@ -19,10 +19,7 @@ echo "
 		<td></td>
 		<td>
 			<p id = 'uploader'>
-				<form method = 'POST' action = 'upload()'>
-					<input type = 'text' id = 'toUpload'></input>
-					<input type = 'submit' id = 'pushMe'></input>
-				</form>
+				<a href='http://dropitto.me/pconnell89' target = '_blank'>Upload via this external website</a>
 			</p>
 		</td>
 	</tr>
