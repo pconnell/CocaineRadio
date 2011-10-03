@@ -1,8 +1,8 @@
 
 
 <center>
-<form>
-	<input type = 'submit' value = 'logout' onClick = "logout();"/>
+<form method = 'get' action = 'javascript:logout();'>
+	<input type = 'submit' value = 'logout'/>
 </form>
 <table border = '2' id = 'siteData'>
 <thead>
