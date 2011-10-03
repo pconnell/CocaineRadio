@@ -8,7 +8,7 @@
 <BODY>
 Optional page text here.
 </BODY>
-</HTML>"
+</HTML>";
 	}
 ?>
 
