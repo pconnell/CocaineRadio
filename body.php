@@ -1,7 +1,7 @@
 
 
 <center>
-<form action = 'logout.php'>
+<form>
 	<input type = 'submit' value = 'logout' onClick = "logout();"/>
 </form>
 <table border = '2' id = 'siteData'>
