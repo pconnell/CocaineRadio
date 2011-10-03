@@ -1,8 +1,9 @@
-<form action = ''>
-	<input type = 'submit' value = 'logout' onClick = "logout()"/>
-</form>
+
 
 <center>
+<form action = 'logout.php'>
+	<input type = 'submit' value = 'logout'/>
+</form>
 <table border = '2' id = 'siteData'>
 <thead>
 	<tr>
@@ -37,5 +38,5 @@
 </table>
 </center>
 <script type = 'text/javascript'>
-	setInterval(pls,1000);
+	setInterval(pls(),1000);
 </script>
