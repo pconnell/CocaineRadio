@@ -1,4 +1,9 @@
 --- 
-php_extensions: 
-  - mysqli
-  - mysql
+web1: 
+  document_root: index.php
+  name: patrick
+  php_extensions: 
+    - mysqli
+    - mysql
+    - eaccelerator
+  php_version: "5.3.8"
