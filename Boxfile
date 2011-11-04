@@ -9,4 +9,5 @@ web1:
     - mysqli
     - mysql
     - eaccelerator
+	- mcrypt
   php_version: "5.3.8"
