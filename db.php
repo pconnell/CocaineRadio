@@ -3,5 +3,5 @@
 	//$DB->setFetchMode(PDO::FETCH_ASSOC);
 	//$mysqli = new mysqli("localhost;unix_socket=/tmp/mysql/belle.sock",'elenore','8dnTIbvF','belle');
 	//$mysqli = new PDO("mysql:host=localhost;dbname=belle;unix_socket=/tmp/mysql/belle.sock",'elenore','8dnTIbvF');
-    $DB = mysqli_connect('tunnel.pagodabox.com:3306','hanh','9S3X4nvm','radio_data');
+    $DB = mysqli_connect('tunnel.pagodabox.com','hanh','9S3X4nvm','radio_data',3306);
 ?>
