@@ -1,6 +1,9 @@
 --- 
 web1: 
-  document_root: index.php
+  document_root: /
+  index_list: 
+    - index.html
+    - index.php
   name: patrick
   php_extensions: 
     - mysqli
