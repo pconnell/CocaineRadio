@@ -39,7 +39,7 @@
 		if ($row['id'] != ''){
 			//echo "yay!<br/>";
 			$_SESSION['username'] = $row['username'];
-			$_SESSION['userID'] = $row['userID'];
+			$_SESSION['userID'] = $row['id'];
 			$_SESSION['email'] = $row['email'];
 			//include('header.php');
 			include('body.php');
