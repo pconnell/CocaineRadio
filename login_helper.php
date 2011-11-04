@@ -2,10 +2,6 @@
 	session_start();
 ?>
 <?php
-<?php
-	session_start();
-?>
-<?php
 	include('db.php');
 	$pw = $_GET['password'];
 	$user = $_GET['username'];
