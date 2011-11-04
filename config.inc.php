@@ -31,8 +31,8 @@ $cfg['Servers'][$i]['compress']         = false;
 $cfg['Servers'][$i]['extension'] = 'mysqli';
 
 /* User for advanced features */
-$cfg['Servers'][$i]['controluser'] = 'pma';
-$cfg['Servers'][$i]['controlpass'] = '';
+$cfg['Servers'][$i]['controluser'] = 'hanh';
+$cfg['Servers'][$i]['controlpass'] = '9S3X4nvm';
 
 /* Advanced phpMyAdmin features */
 $cfg['Servers'][$i]['pmadb']            = 'phpmyadmin';
