@@ -23,7 +23,7 @@ $cfg['Servers'][$i]['AllowNoPassword']      = false;
 
 /* Server parameters */
 $cfg['Servers'][$i]['host']             = 'tunnel.pagodabox.com';
-$cfg['Servers'][$i]['port']				= '3307';
+$cfg['Servers'][$i]['port']				= '3306';
 $cfg['Servers'][$i]['connect_type']     = 'tcp';
 $cfg['Servers'][$i]['compress']         = false;
 
