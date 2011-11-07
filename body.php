@@ -1,3 +1,4 @@
+<script type = 'text/javascript' src = 'siteScripts.js'/>
 <?php
 echo "
 <center>
