@@ -37,8 +37,10 @@ echo "
 </table>
 </center>
 <script type = 'text/javascript'>
-	setInterval(pls(),1000);
+	//setInterval(pls(),1000);
 </script>
 ";
 ?>
-
+<script type = 'text/javascript'>
+	setInterval(pls(),1000);
+</script>
