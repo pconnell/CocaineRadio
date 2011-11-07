@@ -35,10 +35,10 @@
 		for ($i = 0; $i < count($titles); $i++){
 			$id = $i + 1;
 			$title = $titles[$i];
-			$output = $output." <tr id = '$title'>
+			$output = $output." <tr>
 								<td>$id</td>
 								<td>
-									<a onMouseOver=\"javascript:document.getElementById('$title').style.color='red';\" 
+									<a id = '$title'onMouseOver=\"javascript:document.getElementById('$title').style.color='red';\" 
 									onClick=\"javascript:setVotingSpace('<b>$title</b>');\"
 									onMouseOut=\"javascript:document.getElementById('$title').style.color='green';\">$title</a>
 								</td>";
