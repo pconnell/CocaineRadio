@@ -29,10 +29,10 @@
     if (isset($_SESSION['username'])){
 		$name = $_SESSION['username'];
 		echo "<center><p>".$name."</p></center>";
-		echo "<script type = 'text/javascript'>update('/body.php','pb');/*body();*/</script>";
+		echo "<script type = 'text/javascript'>update('/body.php','pb');</script>";
 		//include('body.php');
 	}else{
-		echo"<script type = 'text/javascript'>update('/login.php','pb');/*login();*/</script>";
+		echo"<script type = 'text/javascript'>update('/login.php','pb');</script>";
 		//include('login.php');
 	}
 ?>
