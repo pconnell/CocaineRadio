@@ -35,7 +35,13 @@
 		for ($i = 0; $i < count($titles); $i++){
 			$id = $i + 1;
 			$title = $titles[$i];
-			$output = $output."<tr id = '$title'><td>$id</td><td><a onClick=\"javascript:setVotingSpace('<b>$title</b>');backgroundColor='blue'\">$title</a></td>";
+			$output = $output." <tr id = '$title'>
+								<td>$id</td>
+								<td>
+									<a onMouseOver=\"javascript:document.getElementById('$title').style.color='red';\" 
+									onClick=\"javascript:setVotingSpace('<b>$title</b>');\"
+									onMouseOut=\"javascript:document.getElementById('$title').style.color='green';\">$title</a>
+								</td>";
 			if ($id == 1){
 				$output = $output."<td><b>Current Song</b></td>";
 			}
