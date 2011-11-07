@@ -99,4 +99,37 @@ function pls(){
 		}
 	}
 }
-	
+
+var plsText = getPlsText();
+
+function getPlsText(){
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp = new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+		//write("ActiveXObject");
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.open("GET","/pls.php",true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4)
+		{
+			return xmlhttp.responseText;
+		}
+	}
+}	
+
+function updatePls(){
+	var current = getPlsText();
+	if (current != plsText){
+		plsText = current;
+		pls();
+	}
+}
+
+setInterval(updatePls,1000);
