@@ -16,7 +16,7 @@ echo "
 <tbody>
 	<tr>
 		<td><p id = 'playlist'></p></td>
-		<td></td>
+		<td><p id = 'voting'</p></td>
 		<td>
 			<p id = 'uploader'>
 				<a href='http://dropitto.me/pconnell89' target = '_blank'>Upload via this external website</a>

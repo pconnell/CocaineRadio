@@ -21,6 +21,32 @@ function update(data,obj){
 	}
 }
 
+function setVotingSpace(title){
+	var data ='/voting.php';
+	var obj = 'voting';
+	var xmlhttp;
+	//document.write(data);
+	//document.write(obj);
+	if (window.XMLHttpRequest)
+	{
+		xmlhttp = new XMLHttpRequest();
+	}
+	else
+	{
+	  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.open("GET",""+data,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4)
+		{
+			document.getElementById(""+obj).innerHTML=title+xmlhttp.responseText;
+		}
+	}
+}
+
+
 function logout(){
 	update('/logout.php','pb');
 }
