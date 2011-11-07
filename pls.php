@@ -44,5 +44,5 @@
 		$output = $output."</table>";
 		echo $output;
 	}
-	echo $played;
+	//echo $played;
 ?>
